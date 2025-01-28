@@ -1,0 +1,574 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* --- Ang smooth scrolling sa page --- */
+html{
+    scroll-behavior: smooth;
+}
+
+/* --- Body background ug color --- */
+body{
+    background: #080808;
+    color: white;
+}
+
+/* --- Header section --- */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Image/gifbg.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- Container padding --- */
+.container{
+    padding: 10px 10%;
+}
+
+/* --- Navigation bar --- */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- Logo size --- */
+.logo{
+    width: 140px;
+}
+
+/* --- List items sa nav --- */
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+/* --- Links sa navigation bar --- */
+nav ul li a{
+    background: #252525;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 15px;
+}
+
+/* --- Hover effect sa navigation links --- */
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* --- Header text styling --- */
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/* --- About Section --- */
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* --- About columns --- */
+.about-col-1{
+    flex-basis: 35%;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.about-col-2{
+    flex-basis: 60%;
+}
+
+/* --- Sub-title sa About Section --- */
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+
+/* --- Tab titles for content navigation --- */
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.3s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+/* --- Tab content --- */
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* --- Services Section --- */
+#services {
+    padding: 30px 0;
+}
+
+/* --- Grid layout for services --- */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* --- Individual service item --- */
+.services-list div {
+    background: #535252;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* --- Hover effect sa service --- */
+.services-list div:hover {
+    background: #800080;
+    transform: translateY(-10px);
+}
+
+/* --- My Work Section --- */
+#mywork{
+    padding: 80px 0;
+    margin-left: 120px;
+    margin-right: 100px;
+}
+
+/* --- Grid layout for work items --- */
+.w-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* --- Work item styling --- */
+.work{
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+/* --- Layer over work items on hover --- */
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+/* --- Hover effect for work image --- */
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+/* --- Contact Section --- */
+#contact {
+    padding: 30px 0;
+    background-color: #424141; 
+    color: white; 
+    border-radius: 10px; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    box-sizing: border-box;
+}
+
+/* --- Grid layout for contact types --- */
+.typeofcontact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+    margin-top: 20px;
+}
+
+/* --- Individual contact item --- */
+.typeofcontact div {
+    background: #262626; 
+    padding: 40px; 
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px; 
+    transition: background 0.5s, transform 0.5s;
+}
+
+.typeofcontact h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.typeofcontact p {
+    margin-top: 20px;
+}
+
+.typeofcontact h2 i{
+    margin-bottom: 10px;
+    color: #ff004f;
+    font-size: 20px;
+}
+
+.typeofcontact a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* --- Hover effect for contact items --- */
+.typeofcontact div:hover {
+    background: #8A00C4; 
+    transform: translateY(-10px);
+    text-decoration: underline;
+}
+
+.typeofcontact div p:hover {
+    text-decoration: underline;
+}
+
+/* --- Contact layout columns --- */
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+/* --- Contact left side text styling --- */
+.contact-left p {
+    margin-top: 30px;
+}
+
+.contact-left p i {
+    color: #800080;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+/* --- Social media icons --- */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #800080;
+    transform: translateY(-5px);
+}
+
+/* --- Form styling --- */
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #501650;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* --- Button styling --- */
+.btn.btn2 {
+    display: inline-block;
+    background: linear-gradient(90deg, #800080, #ff00ff); /* Nagbutang ug gradient background */
+    color: #fff; /* Ang text kay puti para klaro */
+    padding: 14px 30px; /* Giregular ang padding para sa nindot nga porma */
+    font-size: 18px; /* Medyo dako nga font size */
+    font-weight: 500; /* Medium weight para balance */
+    border: none; /* Wala'y border */
+    border-radius: 30px; /* Pill shape ang button */
+    box-shadow: 0 4px 10px rgba(128, 0, 128, 0.5); /* Soft shadow effect */
+    transition: all 0.3s ease; /* Smooth transition sa hover effect */
+    cursor: pointer; /* Nagbago ang cursor kung naka-hover */
+    text-align: center; /* Nag-center sa text */
+    text-decoration: none; /* Wala'y underline */
+}
+
+.btn.btn2:hover {
+    background: linear-gradient(90deg, #ff00ff, #800080); /* Naga-reverse ang gradient kung hover */
+    transform: scale(1.05); /* Gamit ang slight zoom effect */
+    box-shadow: 0 6px 15px rgba(128, 0, 128, 0.7); /* Mas nindot nga shadow sa hover */
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #262626; 
+    color: white; 
+    text-align: center; 
+    padding: 20px 10px; 
+    font-size: 14px;
+    margin-top: 30px; 
+}
+
+footer p {
+    margin: 0; 
+    line-height: 1.5; 
+}
+
+/* --- Social Icons --- */
+.social-icons {
+    margin-top: 30px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+    color: #800080;
+    transform: translateY(-5px);
+}
+
+/* --- Phone size responsiveness --- */
+nav .fa-solid  {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url('Image/gifbg.gif');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+        height: 100vh; 
+        width: 50vh; 
+    }
+
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    nav .fa-solid  {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        width: 250px;
+        height: 100vh;
+        padding-top: 60px;
+        z-index: 2;
+    }
+
+    nav ul li a{
+        padding: 0;
+        background: none;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .sub-title{
+        font-size: 40px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1{
+        margin-bottom: 20px;
+    }
+
+    .about-col-2{
+        font-size: 16px;
+    }
+
+    .tab-links{
+        font-size: 20px;
+        margin-right: 10px;
+        margin-left: 5px;
+    }
+
+    #contact{
+        margin-left: 10px;
+    }
+
+    #language{
+        margin-left: 10px;
+    }
+
+    #about{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #footer{
+        display: contents;
+        margin-left: 10px;
+        flex-basis: 100%;
+    }
+
+    .logo{
+        width: 80px;
+    }
+
+    #mywork{
+        margin: auto;
+    }
+}

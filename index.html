@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta information para sa character encoding ug responsive design -->
+    <meta charset="UTF-8">
+    <!-- Mga external nga stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>James Carl Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header section para sa navigation ug welcome text -->
+    <div id="header">
+        <div class="container">
+        <nav>
+            <img src="image/logo.png" class="logo">
+            <ul id="sidemenu">
+                <i class="fa-solid fa-x" onclick="closemenu()"></i>
+                <li><a href="https://mura-sn.github.io/lab1elec/">Switch Portfolio</a></li>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#mywork">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>              
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>IT/Geek</p>
+            <h1>Hi, I'm <span>James Carl</span><br>Baliong from Bohol</h1>
+        </div>
+        </div>
+    </div>
+                        <!-- About section para sa personal nga impormasyon -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Image/profile.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am James Carl L Baliong, a third-year Bachelor of Science in Information Technology student at Bohol Island State University - Balilihan Campus. I enjoy learning about coding and finding ways to use it. I also enjoy reading comics/manga, eating and listening to music.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('food')">Fav Food</p>
+                            <p class="tab-links" onclick="opentab('band')">Fav Band</p>
+                            <p class="tab-links" onclick="opentab('ytuber')">Fav YTber</p>
+                        </div>
+                        <!----------  Skill --------->
+                        <div class="tab-contents active-tab" id="food">
+                            <ul>
+                                <li><span>Breakfast</span><br>hatsilog</li>
+                                <li><span>Main course </span><br>Sisig</li>
+                                <li><span>Dessert</span><br>Letche flan</li>
+                            </ul>
+                        </div>
+                        <!----------  Experience --------->
+                        <div class="tab-contents" id="band">
+                            <ul>
+                                <li><span>RadioHead</span><br>Creep</li>
+                                <li><span>My Chemical Romance</span><br>Cancer</li>
+                                <li><span>Dayglow</span><br>Can i call you tonight?</li>
+                            </ul>
+                        </div>
+                        <!----------  Education --------->
+                        <div class="tab-contents" id="ytuber">
+                            <ul>
+                                <li><span>Podcast</span><br>TrashTaste</li>
+                                <li><span>SoloYTber</span><br>Pewdiepie</li>
+                                <li><span>Vtuber</span><br>Gawr Gura</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                        <!-- My Services section -->
+                        <div id="services">
+                            <div class="container">
+                                <h1 class="sub-title">My Services</h1>
+                                <div class="services-list">
+                        <div>
+                            <i class="fa-solid fa-pen-nib"></i>
+                        <h2>Visual Identity Design</h2>
+                        <p>Focuses on the creation of a brand’s visual elements. Includes logos, color palettes, typography, and brand guidelines. Examples: Corporate branding, business cards, letterheads.
+                        </p>
+                        <a href="#">Learn more.</a>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-code"></i>
+                            <h2>Publication Design</h2>
+                            <p>Focuses on layout and design for print and digital publications. Examples: Magazines, newspapers, books, catalogs, and e-books.
+                            </p>
+                            <a href="#">Learn more.</a>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-crop"></i>
+                                <h2>Typography Design</h2>
+                                <p>Focuses on the creative arrangement of text for visual impact. Includes font design, custom lettering, and type treatments.
+                                    Examples: Posters, title sequences, branding materials.</p>
+                                <a href="#">Learn more.</a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!----------  My Works --------->
+        <div id="mywork">
+            <div class="fcontainer">
+                <h1 class="sub-title"> My Works</h1>
+                <div class="w-list">
+                    <div class="work">
+                        <img src="Image/cover1.jpg">
+                        <div class="layer">
+                            <h3>Midterm on our Graphics, Design and Animation</h3>
+                        <p>This project is part of my midterm laboratory activity, where I designed a discount poster showcasing special offers on manga and comics. The goal was to create an eye-catching and visually appealing design that effectively communicates the promotion while demonstrating creativity and technical skills.</p>    
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="Image/cover2.jpg">
+                        <div class="layer">
+                        <h3>Finals on our Graphics, Design and Animation</h3>
+                            <p>The second picture represents my final laboratory activity, featuring an image of José Rizal that I creatively edited. I incorporated text onto his skin, symbolically reflecting significant aspects of his journey and contributions. This piece serves as both an artistic and educational exploration of his legacy.</p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="Image/cover3.jpg">
+                        <div class="layer">                       
+                        <h3>Bluetooth app</h3>
+                            <p>The last picture showcases an activity for our Android development subject. It features an app I created that allows users to control Bluetooth functionality, including turning it on or off, discovering nearby devices, and sending files. This project highlights the integration of essential Bluetooth features in a mobile application.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- form -->
+        <div id="form">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Form</h1>
+                        
+                        
+                    </div>
+                    <div class="contact-right"></div>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+            
+        
+        </div>
+                        <!-- Contact Form -->
+    <div id="contact">
+        <div class="container">
+            <div class="contact-center">
+                <h1 class="sub-title">Contact</h1>
+                <div class="typeofcontact">
+                    <div>
+                        <h2><i class="fa-regular fa-envelope"></i><br>Email</h2>
+                        <p>james_carl.baliong@bisu.edu.ph</p>
+                        
+                    </div>
+                    <div>
+                        <h2><i class="fa-solid fa-phone"></i><br>Phone Number</h2>
+                        <p>09636373439</p>
+                        
+                    </div>
+                    <div>
+                        
+                        <h2><i class="fa-brands fa-facebook"></i><br>FaceBook</h2>
+                        <p>Baliong L James Carl</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+        <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; 2024 James Carl L Baliong. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </footer>                
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!-- Scripts para sa menu ug tab functionality -->
+    <script>
+    var sidemenu = document.getElementById("sidemenu");
+    
+    function openmenu(){
+        sidemenu.style.right="0";
+    
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+        
+    }
+    
+    </script>
+    
+        
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link"); // Corrected typo here
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab"); // Corrected typo here AND variable name
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+    <script>
+        var sidemeno = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemeno.style.right = "0";
+        }
+        function closemenu(){
+            sidemeno.style.right = "-500px";
+        }
+    </script>
+    
+</body>
+</html>
